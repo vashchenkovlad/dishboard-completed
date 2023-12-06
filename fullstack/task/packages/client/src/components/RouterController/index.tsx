@@ -1,4 +1,4 @@
-import { FC, React } from 'react';
+import React, { FC } from 'react';
 import { RoutesPath } from '../../routes';
 import './styles.css';
 

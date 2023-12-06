@@ -4473,6 +4473,43 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["ag-grid-community", [\
+      ["npm:31.0.0", {\
+        "packageLocation": "./.yarn/cache/ag-grid-community-npm-31.0.0-cd2480973f-24ebe5e99d.zip/node_modules/ag-grid-community/",\
+        "packageDependencies": [\
+          ["ag-grid-community", "npm:31.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["ag-grid-react", [\
+      ["npm:31.0.0", {\
+        "packageLocation": "./.yarn/cache/ag-grid-react-npm-31.0.0-26dc406b15-4563ab6fee.zip/node_modules/ag-grid-react/",\
+        "packageDependencies": [\
+          ["ag-grid-react", "npm:31.0.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:31.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/ag-grid-react-virtual-bf58725cfc/0/cache/ag-grid-react-npm-31.0.0-26dc406b15-4563ab6fee.zip/node_modules/ag-grid-react/",\
+        "packageDependencies": [\
+          ["ag-grid-react", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:31.0.0"],\
+          ["@types/react", "npm:18.0.17"],\
+          ["@types/react-dom", "npm:18.0.6"],\
+          ["ag-grid-community", "npm:31.0.0"],\
+          ["prop-types", "npm:15.8.1"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["agent-base", [\
       ["npm:6.0.2", {\
         "packageLocation": "./.yarn/cache/agent-base-npm-6.0.2-428f325a93-21fb903e09.zip/node_modules/agent-base/",\
@@ -5882,6 +5919,8 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.0.6"],\
           ["@types/styled-components", "npm:5.1.32"],\
           ["@vitejs/plugin-react", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:2.1.0"],\
+          ["ag-grid-community", "npm:31.0.0"],\
+          ["ag-grid-react", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:31.0.0"],\
           ["cross-env", "npm:7.0.3"],\
           ["eslint-import-resolver-typescript", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:3.5.3"],\
           ["eslint-plugin-import", "virtual:658502eb4296e93abedc18b6aa9b26978f434f08d98e21ebb0e725354b8bb54b62db9c4a1893e460c694ff7500ff5cbafa4457b0dfd26b5838868666c861e990#npm:2.27.5"],\

@@ -2997,6 +2997,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ag-grid-community@npm:^31.0.0, ag-grid-community@npm:~31.0.0":
+  version: 31.0.0
+  resolution: "ag-grid-community@npm:31.0.0"
+  checksum: 24ebe5e99def4e484221000eb49627efabaafd7e74de3d354b03054e9d286728adc2af65085955801920482333b4abf5d361eb68a3f82286c5063734fe13279a
+  languageName: node
+  linkType: hard
+
+"ag-grid-react@npm:^31.0.0":
+  version: 31.0.0
+  resolution: "ag-grid-react@npm:31.0.0"
+  dependencies:
+    ag-grid-community: "npm:~31.0.0"
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    react: ^16.3.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
+  checksum: 4563ab6feea06e46b9578078eb000b74d5f3381d9da3ab6973380ecc80b7e094094dcb0afefee675f46fa1fe26000c7ee7dd2d49dad0eed3819dbff426c084c8
+  languageName: node
+  linkType: hard
+
 "agent-base@npm:6":
   version: 6.0.2
   resolution: "agent-base@npm:6.0.2"
@@ -4127,6 +4147,8 @@ __metadata:
     "@types/react-dom": "npm:18.0.6"
     "@types/styled-components": "npm:^5.1.26"
     "@vitejs/plugin-react": "npm:2.1.0"
+    ag-grid-community: "npm:^31.0.0"
+    ag-grid-react: "npm:^31.0.0"
     cross-env: "npm:7.0.3"
     eslint-import-resolver-typescript: "npm:3.5.3"
     eslint-plugin-import: "npm:2.27.5"

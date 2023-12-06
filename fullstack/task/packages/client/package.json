@@ -4,6 +4,8 @@
     "version": "1.0.0",
     "dependencies": {
         "@apollo/client": "3.7.10",
+        "ag-grid-community": "^31.0.0",
+        "ag-grid-react": "^31.0.0",
         "graphql": "16.6.0",
         "graphql-tag": "2.12.6",
         "graphql-ws": "5.12.0",

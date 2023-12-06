@@ -1,7 +1,7 @@
 import React from 'react';
 import { IndexRouteObject } from 'react-router-dom';
 import Home from './pages/Home';
-import ExchangeRate from './pages/ExchangeRate';
+import ExchangeRateList from './pages/ExchangeRate';
 
 export interface AppRoute extends Partial<IndexRouteObject> {
     path: string;
@@ -20,6 +20,6 @@ export const routes = [
     },
     {
         path: '/exchange-rate',
-        Component: ExchangeRate,
+        Component: ExchangeRateList,
     },
 ];

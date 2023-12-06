@@ -7,7 +7,7 @@ import {
 import {} from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
 import { HttpLink } from '@apollo/client/link/http';
-import { useMemo, React } from 'react';
+import React, { useMemo } from 'react';
 
 type Props = {
     children: React.ReactNode;

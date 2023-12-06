@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, React } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import './page-layout.css';
 
 const PageLayout: FC<PropsWithChildren> = ({ children }) => {
