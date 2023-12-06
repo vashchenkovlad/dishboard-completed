@@ -1,6 +1,6 @@
 {
     "name": "dishboard",
-    "packageManager": "yarn@3.2.3",
+    "packageManager": "yarn@4.0.2",
     "workspaces": [
         "packages/**"
     ],
