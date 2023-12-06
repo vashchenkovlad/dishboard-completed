@@ -1,4 +1,6 @@
-export type AvailableBanks = 'CZ' | 'USA';
+export enum BankAlpha2Code {
+    CZ = 'CZ',
+}
 
 export enum Languages {
     EN = 'EN',

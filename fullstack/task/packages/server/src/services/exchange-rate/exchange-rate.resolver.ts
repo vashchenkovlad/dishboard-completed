@@ -10,7 +10,7 @@ export class ExchangeRateResolver {
 
     @Query(() => [ExchangeRate])
     async czechBankExchangeRates(): Promise<ExchangeRate[]> {
-        // For now these values are hardcoded, in future these params might be passed by users as an input.
+        // TODO: Add an option for users to pass these options if they want to see rates for different days
         const exchangeDate = new Date();
         const lang: Languages = Languages.EN;
 

@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { AxiosError } from 'axios';
 import { catchError, firstValueFrom } from 'rxjs';
+import { Cron, CronExpression } from '@nestjs/schedule';
 import { ExchangeRate, Languages } from '../../shared/types/index';
 import { Bank } from '../../shared/models/Bank.model';
 import { ExchangeRateRepository } from '../../entities/repositories/exchange-rate/exchange-rate.repository';
@@ -43,5 +44,10 @@ export class ExchangeRateService {
         await this.exchangeRateRepository.bulkInsert(rates);
 
         return rates;
+    }
+
+    @Cron(CronExpression.EVERY_5_MINUTES)
+    async handleDeletion(): Promise<void> {
+        return this.exchangeRateRepository.deleteExpiredRates();
     }
 }

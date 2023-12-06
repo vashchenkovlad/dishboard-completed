@@ -1,8 +1,8 @@
-import { AvailableBanks, Languages } from '../types';
+import { BankAlpha2Code, Languages } from '../types';
 import { Bank } from './Bank.model';
 
 export class CzechNationalBank extends Bank {
-    public alpha2Code: AvailableBanks = 'CZ';
+    public alpha2Code = BankAlpha2Code.CZ;
 
     public getDataSourceUrl(lang: Languages, date: Date): string {
         return `https://api.cnb.cz/cnbapi/exrates/daily?date=${this.parseDate(date)}&lang=${lang}`;

@@ -11,22 +11,33 @@ export class ExchangeRateRepository {
         private readonly ormRepository: Repository<ExchangeRateEntity>
     ) {}
 
-    public async findAll(): Promise<WithPagination<ExchangeRateEntity>> {
-        const queryBuilder = this.ormRepository.createQueryBuilder('currency');
+    private get queryBuilder() {
+        return this.ormRepository.createQueryBuilder('currency');
+    }
 
-        const [rates, count] = await queryBuilder.getManyAndCount();
+    public async findAll(): Promise<WithPagination<ExchangeRateEntity>> {
+        const [rates, count] = await this.queryBuilder.getManyAndCount();
 
         return { itemsCount: count, entities: rates };
     }
 
     public async bulkInsert(rates: ExchangeRate[]): Promise<void> {
-        const queryBuilder = this.ormRepository.createQueryBuilder('currency');
-
-        await queryBuilder
+        this.queryBuilder
             .createQueryBuilder()
             .insert()
             .into(ExchangeRateEntity)
             .values(rates)
+            .execute();
+    }
+
+    public async deleteExpiredRates(): Promise<void> {
+        const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000);
+
+        await this.queryBuilder
+            .createQueryBuilder()
+            .delete()
+            .from(ExchangeRateEntity)
+            .where('createdAtUtc < :fiveMinutesAgo', { fiveMinutesAgo })
             .execute();
     }
 }
