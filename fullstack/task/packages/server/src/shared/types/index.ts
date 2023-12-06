@@ -5,10 +5,15 @@ export enum Languages {
     CZ = 'CZ',
 }
 
-export interface Currency {
+export interface ExchangeRate {
     amount: number;
     currency: string;
     country: string;
     currencyCode: string;
     rate: number;
+}
+
+export interface WithPagination<T> {
+    itemsCount: number;
+    entities: T[];
 }

@@ -1,7 +1,7 @@
 import { Field, Float, Int, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
-export class Currency {
+export class ExchangeRate {
     @Field(() => Int)
     amount?: number;
 
