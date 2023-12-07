@@ -37,7 +37,7 @@ export class ExchangeRateRepository {
             .createQueryBuilder()
             .delete()
             .from(ExchangeRateEntity)
-            .where('createdAtUtc < :fiveMinutesAgo', { fiveMinutesAgo })
+            .where('createdAtUtc <= :fiveMinutesAgo', { fiveMinutesAgo })
             .execute();
     }
 }
