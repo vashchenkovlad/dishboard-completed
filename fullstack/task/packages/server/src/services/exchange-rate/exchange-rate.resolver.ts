@@ -1,10 +1,11 @@
-import { Query, Resolver } from '@nestjs/graphql';
+import { Query, Resolver, ResolveField, Parent } from '@nestjs/graphql';
 import { Languages } from '../../shared/types/index';
 import { CzechNationalBank } from '../../shared/models/CzechNationalBank.model';
 import { ExchangeRate } from '../../graphql/models/ExchangeRate.graphql.model';
 import { ExchangeRateService } from './exchange-rate.service';
+import { differenceInMinutes } from 'date-fns';
 
-@Resolver()
+@Resolver(() => ExchangeRate)
 export class ExchangeRateResolver {
     constructor(private readonly exchangeRateService: ExchangeRateService) {}
 
@@ -21,5 +22,13 @@ export class ExchangeRateResolver {
             exchangeDate,
             bank
         );
+    }
+
+    @ResolveField()
+    fetchedMinutesAgo(@Parent() exchangeRate: ExchangeRate): string {
+        const minutes: number = differenceInMinutes(new Date(), exchangeRate.createdAtUtc);
+        // During the first fetch from a bank data is returned directly from API, without `createAtUtc` column
+        // to prevent query data after it was stored, add this `isNan` check
+        return isNaN(minutes) || minutes < 1 ? '< 1 minute ago' : `${minutes} minutes ago`
     }
 }

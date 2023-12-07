@@ -4,4 +4,5 @@ export interface ExchangeRate {
   country: string;
   currencyCode: string;
   rate: number;
+  fetchedMinutesAgo: number
 }

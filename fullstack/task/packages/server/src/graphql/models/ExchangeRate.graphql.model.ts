@@ -3,17 +3,23 @@ import { Field, Float, Int, ObjectType } from '@nestjs/graphql';
 @ObjectType()
 export class ExchangeRate {
     @Field(() => Int)
-    amount?: number;
+    amount!: number;
 
-    @Field()
-    currency?: string;
+    @Field(() => String)
+    currency!: string;
 
-    @Field()
-    country?: string;
+    @Field(() => String)
+    country!: string;
 
-    @Field()
-    currencyCode?: string;
+    @Field(() => String)
+    currencyCode!: string;
 
     @Field(() => Float)
-    rate?: number;
+    rate!: number;
+    
+    @Field(() => Date)
+    createdAtUtc!: Date;
+
+    @Field(() => String)
+    fetchedMinutesAgo?: string;
 }

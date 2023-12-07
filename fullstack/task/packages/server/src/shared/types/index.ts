@@ -13,6 +13,7 @@ export interface ExchangeRate {
     country: string;
     currencyCode: string;
     rate: number;
+    createdAtUtc: Date;
 }
 
 export interface WithPagination<T> {

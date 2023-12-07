@@ -23,6 +23,8 @@ type ExchangeRate {
   country: String!
   currencyCode: String!
   rate: Float!
+  createdAtUtc: DateTime!
+  fetchedMinutesAgo: String!
 }
 
 type Query {

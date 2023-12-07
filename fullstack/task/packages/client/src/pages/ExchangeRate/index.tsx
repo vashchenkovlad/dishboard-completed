@@ -26,7 +26,8 @@ const EXCHANGE_RATES_QUERY = gql`
       rate
       country
       currency
-      currencyCode
+      currencyCode,
+      fetchedMinutesAgo
     }
   }
 `;
@@ -39,6 +40,8 @@ const ExchangeRateList = (): JSX.Element => {
     { field: 'currencyCode', cellStyle: { textAlign: 'start' } },
     { field: 'rate', cellStyle: { textAlign: 'start' } },
     { field: 'amount', cellStyle: { textAlign: 'start' } },
+    { field: 'amount', cellStyle: { textAlign: 'start' } },
+    { field: 'fetchedMinutesAgo', cellStyle: { textAlign: 'start' } },
   ]);
 
     const response = useQuery<QueryResult>(EXCHANGE_RATES_QUERY, { fetchPolicy: 'no-cache' });
